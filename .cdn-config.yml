@@ -1,0 +1,12 @@
+---
+name: byu-feature-card
+description: byu-feature-card
+resources:
+  - src: dist/**
+    dest: ./
+entrypoints:
+  "byu-feature-card.js": 'Examines browser support and downloads the appropriate component bundle'
+  "byu-feature-card.min.js": 'Minified - Examines browser support and downloads the appropriate component bundle'
+  "byu-feature-card.css": 'Main CSS file'
+  "byu-feature-card.min.css": 'Main CSS file'
+docs: https://github.com/byuweb/byu-feature-card
