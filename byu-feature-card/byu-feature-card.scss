@@ -22,7 +22,8 @@
 }
 
 :host([withoout-logo]) {
-  #byu-logo {
+  @include defaultLayout();
+  .logo-container {
     @include hideElement();
   }
 }

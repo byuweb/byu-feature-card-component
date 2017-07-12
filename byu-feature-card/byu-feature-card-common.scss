@@ -15,8 +15,6 @@
  *    limitations under the License.
  */
 
-// TODO: add .hide_element
-
 $navy: #002E5D;
 $darkGray: #141414;
 $gray: #585858;
@@ -31,26 +29,51 @@ $white: #FFFFFF;
     width: 33%;
     margin: 10px;
     display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
   }
+
   .title-slotted-content {
     width: 100%;
-    height: 50px;
     padding: 5px;
-    clear: both;
-    #byu-logo {
-      justify-content: flex-end;
-    }
+    align-items: center;
+    box-sizing: inherit;
+    flex: 1;
+    flex-basis: 100%;
   }
-  .left-slot-container {
-    width: 20%;
-    justify-content: flex-start;
-  }
-  .right-slot-container {
+
+  .title-container {
     width: 80%;
-    justify-content: flex-end;
+    float: left;
   }
+
+  .logo-container {
+    float: right;
+    width: 20%;
+  }
+
+  .logo-container img {
+    height: 15px;
+  }
+
+  .first-row {
+    box-sizing: inherit;
+    padding: 5px;
+  }
+
+  .left-slot-container {
+    float: left;
+    width: 30%;
+  }
+
+  .right-slot-container {
+    float: right;
+    width: 70%;
+  }
+
   .center-slot-container {
     width: 100%;
+    padding: 5px;
     align-items: flex-end;
   }
 }

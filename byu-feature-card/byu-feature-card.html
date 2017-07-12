@@ -21,13 +21,20 @@
 
 <div class="root">
   <div class="title-slotted-content">
-    <slot name="title" id="title"><img id="byu-logo" alt="Card Logo" src="//cdn.byu.edu/logos/monogram-white.svg"></slot>
+    <div class="title-container">
+      <slot name="title" id="title"></slot>
+    </div>
+    <div class="logo-container">
+      <img id="byu-logo" alt="Card Logo" src="//cdn.byu.edu/shared-icons/unstable/logos/monogram-white.svg">
+    </div>
   </div>
-  <div class="left-slot-container">
-    <slot name="left" id="center"></slot>
-  </div>
-  <div class="right-slot-container">
-    <slot name="right" id="center"></slot>
+  <div class="first-row">
+    <div class="left-slot-container">
+      <slot name="left" id="center"></slot>
+    </div>
+    <div class="right-slot-container">
+      <slot name="right" id="center"></slot>
+    </div>
   </div>
   <div class="center-slot-container">
     <slot name="center" id="center"></slot>
