@@ -19,10 +19,8 @@
 import template from './byu-feature-card.html';
 import * as util from 'byu-web-component-utils';
 
-const ATTR_TITLE_BG = 'title-bg';
 const ATTR_LOGO = 'without-logo';
 
-const DEFAULT_TITLE_BG = 'navy';
 const HIDE_ELEMENT_CLASS = '.hide-element';
 
 class ByuFeatureCard extends HTMLElement {
@@ -35,49 +33,8 @@ class ByuFeatureCard extends HTMLElement {
     //This will stamp our template for us, then let us perform actions on the stamped DOM.
     util.applyTemplate(this, 'byu-feature-card', template, () => {
       disableLogo(this);
-
       setupSlotListeners(this);
     });
-  }
-
-  disconnectedCallback() {
-    teardownButtonListeners(this);
-  }
-
-  // Load the change in the CSS rather than JS
-  /*
-  static get observedAttributes() {
-    return [ATTR_FANCY];
-  }
-
-  attributeChangedCallback(attr, oldValue, newValue) {
-    switch(attr) {
-      case ATTR_FANCY:
-        applyFancy(this);
-        break;
-    }
-  } */
-
-  set titleBG(value) {
-      switch (value) {
-          case 'drupal-blue':
-          case 'gray':
-          case 'dark-gray':
-          case 'net-green':
-          case 'navy':
-          case 'royal-blue':
-              this.setAttribute(ATTR_TITLE_BG, value);
-              break;
-          default:
-            this.setAttribute(ATTR_TITLE_BG, 'navy');
-      }
-  }
-
-  get titleBG() {
-    if (this.hasAttribute(ATTR_TITLE_BG)) {
-      return this.getAttribute(ATTR_TITLE_BG);
-    }
-    return DEFAULT_TITLE_BG;
   }
 
   get withoutLogo() {

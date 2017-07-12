@@ -36,6 +36,7 @@ $white: #FFFFFF;
     width: 100%;
     height: 50px;
     padding: 5px;
+    clear: both;
     #byu-logo {
       justify-content: flex-end;
     }
@@ -52,33 +53,6 @@ $white: #FFFFFF;
     width: 100%;
     align-items: flex-end;
   }
-}
-
-/* --- TITLE BG HEADER STYLES --- */
-
-@mixin drupalBlueTitle() {
-  background-color: $drupalBlue;
-  color: $white;
-}
-
-@mixin navyTitle() {
-  background-color: $navy;
-  color: $white;
-}
-
-@mixin darkGrayTitle() {
-  background-color: $darkGray;
-  color: $white;
-}
-
-@mixin grayTitle() {
-  background-color: $gray;
-  color: $white;
-}
-
-@mixin dotNetGreenTitle() {
-  background-color: $dotNetGreen;
-  color: $white
 }
 
 /* --- WITHOUT LOGO STYLE --- */

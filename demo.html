@@ -24,10 +24,27 @@
 
   <link rel="stylesheet" href="dist/byu-feature-card.min.css">
   <script defer src="dist/byu-feature-card.min.js"></script>
+  <style>
+    byu-feature-card.myNavyCard {
+      --byu-feature-card-title-background: #002E5D;
+      --byu-feature-card-title-color: white;
+    }
+  </style>
 </head>
 <body>
 
-<!-- TODO: Add a demo of different card with logo, without logo, and with differen title colors -->
+    <byu-feature-card class="myNavyCard">
+      <h2 slot="title">This is the title!</h2>
+      <img slot="left" src="//cdn.byu.edu/logos/monogram-black.svg" alt="BYU Logo Black">
+      <ul slot="right">
+        <li>This is point one.</li>
+        <li>This is point two.</li>
+        <li>This is point three.</li>
+      </ul>
+      <p slot="center">
+        BYU is so great. Cosmo the Cougar is my best friend. I am so excited for WebFest!
+      </p>
+    </byu-feature-card>
 
 </body>
 </html>
