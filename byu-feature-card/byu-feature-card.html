@@ -20,17 +20,28 @@
 </style>
 
 <div class="root">
-  <div class="output"></div>
-  <div class="button-wrapper">
-    <button class="fancy-button">Make It Fancy!</button>
+  <div class="title-slotted-content">
+    <div class="title-container">
+      <slot name="title" id="title"></slot>
+    </div>
+    <div class="logo-container">
+      <img id="byu-logo" alt="Card Logo" src="//cdn.byu.edu/shared-icons/unstable/logos/monogram-white.svg">
+    </div>
   </div>
-  <div class="fancy-template-wrapper slot-container">
-    <!-- This is our default fancy template. If the consumer doesn't specify anything, we'll use this -->
-    <slot id="fancy-template">
-      <template>
-        <span>🎩</span>
-      </template>
-    </slot>
+  <!-- Add full width feature to template
+  <div class="feature-container">
+    <slot name="feature" id="feature"></slot>
+  </div> -->
+  <div class="first-row">
+    <div class="left-slot-container">
+      <slot name="feature-left" id="center"></slot>
+    </div>
+    <div class="right-slot-container">
+      <slot name="feature-right" id="center"></slot>
+    </div>
+  </div>
+  <div class="center-slot-container">
+    <slot name="body" id="center"></slot>
   </div>
 </div>
 

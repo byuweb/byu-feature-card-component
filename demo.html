@@ -24,68 +24,44 @@
 
   <link rel="stylesheet" href="dist/byu-feature-card.min.css">
   <script defer src="dist/byu-feature-card.min.js"></script>
-
+  <link type="text/css" rel="stylesheet" href="//cloud.typography.com/75214/6517752/css/fonts.css" media="all" />
+  <link rel="stylesheet" href="https://cdn.byu.edu/byu-theme-components/latest/byu-theme-components.min.css" />
+  <script async src="https://cdn.byu.edu/byu-theme-components/latest/byu-theme-components.min.js"></script>
   <style>
-    #fancy-selector {
-      font-size: 2em;
+    h2, p, li, ul, ol {
+      font-family: "Gotham A", "Gotham B", Helvetica, sans-serif;
     }
-
-    #basic-fancy {
-      font-size: 3em;
+    byu-feature-card.myNavyCard {
+      --byu-feature-card-title-color: white;
     }
-
-    #fancy-range {
-      width: 400px;
+    byu-feature-card h2 {
+      margin: 0;
+      padding: 0;
+      font-size: 20px;
+      font-weight: lighter;
     }
   </style>
 </head>
 <body>
+  <byu-header>
+    <span slot="site-title">Feature Card Component</span>
+  </byu-header>
 
-<h1>Default Fanciness</h1>
-<byu-feature-card id="basic-fancy"></byu-feature-card>
+  <byu-feature-card class="myNavyCard">
+    <h2 slot="title">This is the title!</h2>
+    <!-- TODO: Add full width feature and fix it's styling -->
+    <p slot="feature-left">Some filler text for the slot.</p>
+    <ul slot="feature-right">
+      <li>This is point one.</li>
+      <li>This is point two.</li>
+      <li>This is point three.</li>
+    </ul>
+    <p slot="body">
+      BYU is so great. Cosmo the Cougar is my best friend. I am so excited for WebFest!
+    </p>
+    </byu-feature-card>
 
-<h2>How Fancy?</h2>
-<input type="range" min="0" max="20" value="1" id="fancy-range" list="fancyscale"/>
-
-<datalist id="fancyscale">
-  <option value="0" label="Boring"></option>
-  <option value="5" label="Still Boring"></option>
-  <option value="10" label="Less Boring"></option>
-  <option value="15" label="Getting Better"></option>
-  <option value="20" label="Super Fancy!"></option>
-</datalist>
-
-<h2>Customize your fanciness</h2>
-
-<select id="fancy-selector">
-  <option selected>🎩</option>
-  <option>👑</option>
-  <option>👸</option>
-  <option>🤴</option>
-  <option>👗</option>
-  <option>🤵</option>
-  <option>👰</option>
-  <option>🏆</option>
-  <option>🐩</option>
-  <option>🖋️</option>
-</select>
-
-<script>
-  (function () {
-    let range = document.getElementById('fancy-range');
-    let fancy = document.getElementById('basic-fancy');
-
-    range.addEventListener('input', e => {
-      fancy.fancy = range.value;
-    }, false);
-
-    let selector = document.getElementById('fancy-selector');
-
-    selector.addEventListener('change', evt => {
-      fancy.innerHTML = `<template><span>${selector.value}</span></template>`;
-    });
-  })();
-</script>
+  <byu-footer></byu-footer>
 
 </body>
 </html>

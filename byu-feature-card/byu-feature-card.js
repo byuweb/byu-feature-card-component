@@ -19,9 +19,9 @@
 import template from './byu-feature-card.html';
 import * as util from 'byu-web-component-utils';
 
-const ATTR_FANCY = 'fancy';
+const ATTR_LOGO = 'without-logo';
 
-const DEFAULT_FANCY = 1;
+const HIDE_ELEMENT_CLASS = '.hide-element';
 
 class ByuFeatureCard extends HTMLElement {
   constructor() {
@@ -32,38 +32,13 @@ class ByuFeatureCard extends HTMLElement {
   connectedCallback() {
     //This will stamp our template for us, then let us perform actions on the stamped DOM.
     util.applyTemplate(this, 'byu-feature-card', template, () => {
-      setupButtonListeners(this);
-      applyFancy(this);
-
+      disableLogo(this);
       setupSlotListeners(this);
     });
   }
 
-  disconnectedCallback() {
-    teardownButtonListeners(this);
-  }
-
-  static get observedAttributes() {
-    return [ATTR_FANCY];
-  }
-
-  attributeChangedCallback(attr, oldValue, newValue) {
-    switch(attr) {
-      case ATTR_FANCY:
-        applyFancy(this);
-        break;
-    }
-  }
-
-  set fancy(value) {
-    this.setAttribute(ATTR_FANCY, value);
-  }
-
-  get fancy() {
-    if (this.hasAttribute(ATTR_FANCY)) {
-      return Number(this.getAttribute(ATTR_FANCY));
-    }
-    return DEFAULT_FANCY;
+  get withoutLogo() {
+    return this.hasAttribute(ATTR_LOGO);
   }
 
 }
@@ -73,49 +48,16 @@ window.ByuFeatureCard = ByuFeatureCard;
 
 // -------------------- Helper Functions --------------------
 
-function applyFancy(component) {
-  let output = component.shadowRoot.querySelector('.output');
+function disableLogo(component) {
+  let logo = component.shadowRoot.querySelector('#byu-logo');
+  let woLogo = component.withoutLogo;
 
-  let count = component.fancy;
-
-  //Remove all current children
-  while(output.firstChild) {
-    output.removeChild(output.firstChild);
-  }
-
-  if (count === 0) return;
-
-  let slot = component.shadowRoot.querySelector('#fancy-template');
-
-  let template = util.querySelectorSlot(slot, 'template');
-
-  if (!template) {
-    throw new Error('No template was specified!');
-  }
-
-  for (let i = 0; i < count; i++) {
-    let element = document.importNode(template.content, true);
-    output.appendChild(element);
+  if (woLogo) {
+    logo.classList.add(HIDE_ELEMENT_CLASS);
   }
 }
 
-function setupButtonListeners(component) {
-  let button = component.shadowRoot.querySelector('.fancy-button');
-
-  let callback = component.__buttonListener = function(event) {
-    component.fancy = component.fancy + 1;
-  };
-
-  button.addEventListener('click', callback, false);
-}
-
-//We generally want to be good neighbors and clean up after ourselves when we're done with things.
-function teardownButtonListeners(component) {
-  let button = component.shadowRoot.querySelector('.fancy-button');
-
-  button.removeEventListener('click', component.__buttonListener, false);
-}
-
+// TODO: Change to setup event listeners to listen for an attribute change.
 function setupSlotListeners(component) {
   let slot = component.shadowRoot.querySelector('#fancy-template');
 
