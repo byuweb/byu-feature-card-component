@@ -28,16 +28,20 @@
       <img id="byu-logo" alt="Card Logo" src="//cdn.byu.edu/shared-icons/unstable/logos/monogram-white.svg">
     </div>
   </div>
+  <!-- Add full width feature to template
+  <div class="feature-container">
+    <slot name="feature" id="feature"></slot>
+  </div> -->
   <div class="first-row">
     <div class="left-slot-container">
-      <slot name="left" id="center"></slot>
+      <slot name="feature-left" id="center"></slot>
     </div>
     <div class="right-slot-container">
-      <slot name="right" id="center"></slot>
+      <slot name="feature-right" id="center"></slot>
     </div>
   </div>
   <div class="center-slot-container">
-    <slot name="center" id="center"></slot>
+    <slot name="body" id="center"></slot>
   </div>
 </div>
 

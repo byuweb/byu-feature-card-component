@@ -1,7 +1,6 @@
-# byu-feature-card
+# BYU Feature Card
 
-This is a simple Web Component using the BYU Web Community web component
-tools.
+This component is meant to be used to feature a single piece of content (i.e. news story, calendar event, etc.).
 
 # Getting Started
 

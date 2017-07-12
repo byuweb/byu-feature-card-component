@@ -21,8 +21,7 @@
   @include defaultLayout();
 }
 
-:host([withoout-logo]) {
-  @include defaultLayout();
+:host([without-logo]) {
   .logo-container {
     @include hideElement();
   }

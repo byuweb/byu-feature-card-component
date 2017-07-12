@@ -32,7 +32,6 @@
       font-family: "Gotham A", "Gotham B", Helvetica, sans-serif;
     }
     byu-feature-card.myNavyCard {
-      --byu-feature-card-title-background: #002E5D;
       --byu-feature-card-title-color: white;
     }
     byu-feature-card h2 {
@@ -48,15 +47,16 @@
     <span slot="site-title">Feature Card Component</span>
   </byu-header>
 
-  <byu-feature-card class="myNavyCard" without-logo>
+  <byu-feature-card class="myNavyCard">
     <h2 slot="title">This is the title!</h2>
-    <p slot="left">Some filler text for the slot.</p>
-    <ul slot="right">
+    <!-- TODO: Add full width feature and fix it's styling -->
+    <p slot="feature-left">Some filler text for the slot.</p>
+    <ul slot="feature-right">
       <li>This is point one.</li>
       <li>This is point two.</li>
       <li>This is point three.</li>
     </ul>
-    <p slot="center">
+    <p slot="body">
       BYU is so great. Cosmo the Cougar is my best friend. I am so excited for WebFest!
     </p>
     </byu-feature-card>

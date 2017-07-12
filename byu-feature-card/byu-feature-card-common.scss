@@ -31,6 +31,7 @@ $white: #FFFFFF;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    border: 1px solid #E6E6E6;
   }
 
   .title-slotted-content {
@@ -54,10 +55,15 @@ $white: #FFFFFF;
     height: 15px;
   }
 
+  .feature-container {
+    padding: 5px;
+    margin: 0;
+    box-sizing: inherit;
+  }
+
   .first-row {
     box-sizing: inherit;
     padding: 5px;
-
     display: flex;
   }
 
@@ -71,8 +77,9 @@ $white: #FFFFFF;
 
   .center-slot-container {
     width: 100%;
-    padding: 5px;
+    padding: 7px;
     align-items: flex-end;
+    box-sizing: inherit;
   }
 }
 
