@@ -16,3 +16,43 @@
  */
 
 @import 'byu-feature-card-common';
+
+:host {
+  @include defaultLayout();
+}
+
+:host([withoout-logo]) {
+  #byu-logo {
+    @include hideElement();
+  }
+}
+
+:host([title-bg=navy]) {
+  .title-slotted-content {
+    @include navyTitle();
+  }
+}
+
+:host([title-bg=drupal-blue]) {
+  .title-slotted-content {
+    @include drupalBlueTitle();
+  }
+}
+
+:host([title-bg=dark-gray]) {
+  .title-slotted-content {
+    @include darkGrayTitle();
+  }
+}
+
+:host([title-bg=gray]) {
+  .title-slotted-content {
+    @include grayTitle();
+  }
+}
+
+:host([title-bg=dot-net-green]) {
+  .title-slotted-content {
+    @include dotNetGreenTitle();
+  }
+}

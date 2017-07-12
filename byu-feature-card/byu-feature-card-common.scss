@@ -15,3 +15,74 @@
  *    limitations under the License.
  */
 
+// TODO: add .hide_element
+
+$navy: #002E5D;
+$darkGray: #141414;
+$gray: #585858;
+$drupalBlue: #0644BE;
+$dotNetGreen: #186800;
+$white: #FFFFFF;
+
+/* --- DEFAULT LAYOUT STYLES --- */
+
+@mixin defaultLayout() {
+  .root {
+    width: 33%;
+    margin: 10px;
+    display: flex;
+  }
+  .title-slotted-content {
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    #byu-logo {
+      justify-content: flex-end;
+    }
+  }
+  .left-slot-container {
+    width: 20%;
+    justify-content: flex-start;
+  }
+  .right-slot-container {
+    width: 80%;
+    justify-content: flex-end;
+  }
+  .center-slot-container {
+    width: 100%;
+    align-items: flex-end;
+  }
+}
+
+/* --- TITLE BG HEADER STYLES --- */
+
+@mixin drupalBlueTitle() {
+  background-color: $drupalBlue;
+  color: $white;
+}
+
+@mixin navyTitle() {
+  background-color: $navy;
+  color: $white;
+}
+
+@mixin darkGrayTitle() {
+  background-color: $darkGray;
+  color: $white;
+}
+
+@mixin grayTitle() {
+  background-color: $gray;
+  color: $white;
+}
+
+@mixin dotNetGreenTitle() {
+  background-color: $dotNetGreen;
+  color: $white
+}
+
+/* --- WITHOUT LOGO STYLE --- */
+
+@mixin hideElement() {
+  display: none;
+}
