@@ -39,17 +39,15 @@ $white: #FFFFFF;
     align-items: center;
     box-sizing: inherit;
     flex: 1;
-    flex-basis: 100%;
+
+    display: flex;
   }
 
   .title-container {
-    width: 80%;
-    float: left;
+    flex-grow: 1;
   }
 
   .logo-container {
-    float: right;
-    width: 20%;
   }
 
   .logo-container img {
@@ -59,16 +57,16 @@ $white: #FFFFFF;
   .first-row {
     box-sizing: inherit;
     padding: 5px;
+
+    display: flex;
   }
 
   .left-slot-container {
-    float: left;
-    width: 30%;
+    order: 1;
   }
 
   .right-slot-container {
-    float: right;
-    width: 70%;
+    order: 2;
   }
 
   .center-slot-container {
