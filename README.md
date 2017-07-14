@@ -41,7 +41,8 @@ _Title Background Color_: This component comes packaged with predefined, accessi
 - `wordpress-gray-title`
 - `drupal-blue-title`
 
-If you would like more color options, create an issue to inform us or fork the repository and add them yourself.
+If you would like more color options, create an issue to inform us or fork the repository and add them yourself. If you are requesting color options, please try to use BYU colors or colors associated with an existing external brand (i.e. we have Drupal Blue and WordPress gray for those brands' unique colors.) You can see the BYU Colors here: 
+https://brand.byu.edu/guidelines/color/
 
 # Development
 
