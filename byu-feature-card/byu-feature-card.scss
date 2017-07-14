@@ -53,6 +53,18 @@
   }
 }
 
+:host(.royal-blue-title) {
+  .title-slotted-content {
+    @include royalBlueTitleBg();
+  }
+}
+
+:host(.gray-title) {
+  .title-slotted-content {
+    @include grayTitleBg();
+  }
+}
+
 // Allows variable styles if we need them.
 
 .title-slotted-content {

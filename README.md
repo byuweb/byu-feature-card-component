@@ -25,7 +25,7 @@ In `<body>`:
     <li>Item 2</li>
     <li>Item 3</li>
   </ul>
-  <p slot="body">This is where body content goes</p>
+  <p slot="feature-center">This is where body content goes</p>
 </byu-feature-card>
 ```
 The card is divided into three rows: the title row, feature row, and body row. To put elements in the title or body row, set the slot attribute of an element to be `title` or `body`. The feature row can be divided into two sections. To place an element, either add `slot="feature-left"` or `slot="feature-right"` to the element. After forking this repo, you can see a live demo of the component by running the appropriate command from below.
@@ -37,7 +37,9 @@ _Logo_: By default, the BYU monogram will be on the right of the card title. If 
 _Title Background Color_: This component comes packaged with predefined, accessible packages for styling the title. Your current options are:
 
 - `navy-title`
+- `royal-blue-title`
 - `dark-gray-title`
+- `gray-title`
 - `wordpress-gray-title`
 - `drupal-blue-title`
 
@@ -60,12 +62,11 @@ To run a local development server with a file watch, run
 npm start
 ```
 
-To assemble the final distribution bundle, run
+_You should do this before you submit a pull request._ To assemble the final distribution bundle, run
 
 ```
 npm run build
 ```
-You should do this before you submit a pull request.
 
 To run automatic unit tests, run
 

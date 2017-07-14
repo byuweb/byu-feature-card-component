@@ -19,6 +19,8 @@ $navy: #002E5D;
 $darkGray: #141414;
 $wordpressGray: #585858;
 $drupalBlue: #0644BE;
+$royalBlue: #003DA5;
+$gray: #767676;
 $white: #FFFFFF;
 
 /* --- DEFAULT LAYOUT STYLES --- */
@@ -107,5 +109,15 @@ $white: #FFFFFF;
 
 @mixin drupalBlueTitleBg() {
   background-color: $drupalBlue;
+  color: $white;
+}
+
+@mixin royalBlueTitleBg() {
+  background-color: $royalBlue;
+  color: $white;
+}
+
+@mixin grayTitleBg() {
+  background-color: $gray;
   color: $white;
 }
