@@ -17,9 +17,8 @@
 
 $navy: #002E5D;
 $darkGray: #141414;
-$gray: #585858;
+$wordpressGray: #585858;
 $drupalBlue: #0644BE;
-$dotNetGreen: #186800;
 $white: #FFFFFF;
 
 /* --- DEFAULT LAYOUT STYLES --- */
@@ -87,4 +86,26 @@ $white: #FFFFFF;
 
 @mixin hideElement() {
   display: none;
+}
+
+/* --- TITLE BACKGROUND COLORS --- */
+
+@mixin navyTitleBg() {
+  background-color: $navy;
+  color: $white;
+}
+
+@mixin darkGrayTitleBg() {
+  background-color: $darkGray;
+  color: $white;
+}
+
+@mixin wordpressGrayTitleBg() {
+  background-color: $wordpressGray;
+  color: $white;
+}
+
+@mixin drupalBlueTitleBg() {
+  background-color: $drupalBlue;
+  color: $white;
 }

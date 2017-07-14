@@ -31,14 +31,15 @@
     h2, p, li, ul, ol {
       font-family: "Gotham A", "Gotham B", Helvetica, sans-serif;
     }
-    byu-feature-card.myNavyCard {
-      --byu-feature-card-title-color: white;
-    }
     byu-feature-card h2 {
       margin: 0;
       padding: 0;
       font-size: 20px;
       font-weight: lighter;
+    }
+    byu-feature-card.myNavyCard {
+      --byu-feature-left-width: 30%;
+      --byu-feature-right-width: 70%;
     }
   </style>
 </head>
@@ -47,9 +48,9 @@
     <span slot="site-title">Feature Card Component</span>
   </byu-header>
 
-  <byu-feature-card class="myNavyCard">
+  <!-- Title Styling -->
+  <byu-feature-card class="myNavyCard navy-title">
     <h2 slot="title">This is the title!</h2>
-    <!-- TODO: Add full width feature and fix it's styling -->
     <p slot="feature-left">Some filler text for the slot.</p>
     <ul slot="feature-right">
       <li>This is point one.</li>
@@ -60,6 +61,20 @@
       BYU is so great. Cosmo the Cougar is my best friend. I am so excited for WebFest!
     </p>
     </byu-feature-card>
+
+  <!-- Without Logo -->
+  <byu-feature-card class="myDarkGrayCard dark-gray-title" without-logo>
+    <h2 slot="title">This is the title!</h2>
+    <p slot="feature-left">Some filler text for the slot.</p>
+    <ul slot="feature-right">
+      <li>This is point one.</li>
+      <li>This is point two.</li>
+      <li>This is point three.</li>
+    </ul>
+    <p slot="feature-center">
+      BYU is so great. Cosmo the Cougar is my best friend. I am so excited for WebFest!
+    </p>
+  </byu-feature-card>
 
   <byu-footer></byu-footer>
 
