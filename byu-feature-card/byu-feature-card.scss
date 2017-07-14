@@ -27,7 +27,45 @@
   }
 }
 
+/* --- TITLE STYLES --- */
+
+:host(.navy-title) {
+  .title-slotted-content {
+    @include navyTitleBg();
+  }
+}
+
+:host(.dark-gray-title) {
+  .title-slotted-content {
+    @include darkGrayTitleBg();
+  }
+}
+
+:host(.wordpress-gray-title) {
+  .title-slotted-content {
+    @include wordpressGrayTitleBg();
+  }
+}
+
+:host(.drupal-blue-title) {
+  .title-slotted-content {
+    @include drupalBlueTitleBg();
+  }
+}
+
+// Allows variable styles if we need them.
+
 .title-slotted-content {
   background-color: var(--byu-feature-card-title-background, $navy);
   color: var(--byu-feature-card-title-color, white);
+}
+
+/* --- FEATURE WIDTHS --- */
+
+.left-slot-container {
+  width: var(--byu-feature-left-width, 50%);
+}
+
+.right-slot-container {
+  width: var(--byu-feature-right-width, 50%);
 }

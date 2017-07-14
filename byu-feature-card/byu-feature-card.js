@@ -57,12 +57,6 @@ function disableLogo(component) {
   }
 }
 
-// TODO: Change to setup event listeners to listen for an attribute change.
 function setupSlotListeners(component) {
   let slot = component.shadowRoot.querySelector('#fancy-template');
-
-  //this will listen to changes to the contents of our <slot>, so we can take appropriate action
-  slot.addEventListener('slotchange', () => {
-    applyFancy(component);
-  }, false);
 }
