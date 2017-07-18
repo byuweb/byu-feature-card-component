@@ -34,7 +34,7 @@ The card is divided into three rows: the title row, feature row, and body row. T
 
 _Logo_: By default, the BYU monogram will be on the right of the card title. If you don't want it, just add the `without-logo` attribute (see the example above).
 
-_Title Background Color_: This component comes packaged with predefined, accessible packages for styling the title. Your current options are:
+_Title Background Color_: This component comes packaged with predefined, accessible packages for styling the title:
 
 - `navy-title`
 - `royal-blue-title`
@@ -43,8 +43,14 @@ _Title Background Color_: This component comes packaged with predefined, accessi
 - `wordpress-gray-title`
 - `drupal-blue-title`
 
-If you would like more color options, create an issue to inform us or fork the repository and add them yourself. If you are requesting color options, please try to use BYU colors or colors associated with an existing external brand (i.e. we have Drupal Blue and WordPress gray for those brands' unique colors.) You can see the BYU Colors here: 
-https://brand.byu.edu/guidelines/color/
+In addition, if you'd like to use your own colors, you can use this CSS:
+
+```css
+byu-feature-card.cardClass {
+  --byu-feature-card-title-background: 30%;
+  --byu-feature-card-title-color: 70%;
+}
+```
 
 # Development
 
