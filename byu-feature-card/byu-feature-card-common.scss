@@ -126,6 +126,6 @@ $white: #FFFFFF;
   color: $white;
 }
 
-@mixin titleLinkColor {
+@mixin titleLinkColor() {
   color: $white;
 }
