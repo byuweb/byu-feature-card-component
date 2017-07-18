@@ -26,62 +26,62 @@ $white: #FFFFFF;
 /* --- DEFAULT LAYOUT STYLES --- */
 
 @mixin defaultLayout() {
-  .root {
-    width: 33%;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    border: 1px solid #E6E6E6;
-  }
+  width: 30%;
+}
 
-  .title-slotted-content {
-    width: 100%;
-    padding: 5px;
-    align-items: center;
-    box-sizing: inherit;
-    flex: 1;
+@mixin rootLayout() {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 1px solid #E6E6E6;
+}
 
-    display: flex;
-  }
+@mixin titleSlottedContent() {
+  width: 100%;
+  padding: 5px;
+  align-items: center;
+  box-sizing: inherit;
+  flex: 1;
+  display: flex;
+}
 
-  .title-container {
-    flex-grow: 1;
-  }
+@mixin titleContainer() {
+  flex-grow: 1;
+}
 
-  .logo-container {
-  }
+@mixin logoContainer() {
+}
 
-  .logo-container img {
-    height: 15px;
-  }
+@mixin logoContainerImage() {
+  height: 15px;
+}
 
-  .feature-container {
-    padding: 5px;
-    margin: 0;
-    box-sizing: inherit;
-  }
+@mixin featureContainer() {
+  padding: 5px;
+  margin: 0;
+  box-sizing: inherit;
+}
 
-  .first-row {
-    box-sizing: inherit;
-    padding: 5px;
-    display: flex;
-  }
+@mixin firstRow() {
+  box-sizing: inherit;
+  padding: 5px;
+  display: flex;
+}
 
-  .left-slot-container {
-    order: 1;
-  }
+@mixin leftSlotContainer() {
+  order: 1;
+}
 
-  .right-slot-container {
-    order: 2;
-  }
+@mixin rightSlotContainer() {
+  order: 2;
+}
 
-  .center-slot-container {
-    width: 100%;
-    padding: 7px;
-    align-items: flex-end;
-    box-sizing: inherit;
-  }
+@mixin centerSlotContainer() {
+  width: 100%;
+  padding: 7px;
+  align-items: flex-end;
+  box-sizing: inherit;
 }
 
 /* --- WITHOUT LOGO STYLE --- */
@@ -119,5 +119,9 @@ $white: #FFFFFF;
 
 @mixin grayTitleBg() {
   background-color: $gray;
+  color: $white;
+}
+
+@mixin titleLinkColor {
   color: $white;
 }
