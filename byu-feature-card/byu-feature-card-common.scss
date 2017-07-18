@@ -73,10 +73,12 @@ $white: #FFFFFF;
 
 @mixin leftSlotContainer() {
   order: 1;
+  padding: 10px;
 }
 
 @mixin rightSlotContainer() {
   order: 2;
+  padding: 10px;
 }
 
 @mixin centerSlotContainer() {
