@@ -4,7 +4,7 @@ This component is meant to be used to feature a single piece of content (i.e. ne
 
 # How It Works
 
-In `<head><style>`:
+In a stylesheet:
 
 ```css
 byu-feature-card.cardClass {
