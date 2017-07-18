@@ -26,8 +26,8 @@ $white: #FFFFFF;
 /* --- DEFAULT LAYOUT STYLES --- */
 
 @mixin defaultLayout() {
+  width: 30%;
   .root {
-    width: 33%;
     margin: 10px;
     display: flex;
     flex-direction: column;
@@ -119,5 +119,9 @@ $white: #FFFFFF;
 
 @mixin grayTitleBg() {
   background-color: $gray;
+  color: $white;
+}
+
+@mixin titleLinkColor {
   color: $white;
 }
