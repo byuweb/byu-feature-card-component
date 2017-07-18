@@ -47,10 +47,11 @@ In addition, if you'd like to use your own colors, you can use this CSS:
 
 ```css
 byu-feature-card.cardClass {
-  --byu-feature-card-title-background: 30%;
-  --byu-feature-card-title-color: 70%;
+  --byu-feature-card-title-background: #002e5d;
+  --byu-feature-card-title-color: white;
 }
 ```
+The default colors will be a navy blue background with white text.
 
 # Development
 
