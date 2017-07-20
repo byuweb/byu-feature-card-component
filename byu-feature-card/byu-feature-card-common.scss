@@ -26,6 +26,7 @@ $white: #FFFFFF;
 /* --- DEFAULT LAYOUT STYLES --- */
 
 @mixin defaultLayout() {
+  display: block;
 }
 
 @mixin rootLayout() {
@@ -53,6 +54,7 @@ $white: #FFFFFF;
 @mixin titleFont() {
   font-family: "Gotham A", "Gotham B", Helvetica, sans-serif;
   font-weight: 500;
+  margin: 0;
 }
 
 @mixin logoContainer() {
