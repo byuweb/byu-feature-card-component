@@ -17,4 +17,8 @@
 
 @import 'byu-feature-card-common';
 
+byu-feature-card [slot="title"] {
+  @include titleFont();
+}
+
 
