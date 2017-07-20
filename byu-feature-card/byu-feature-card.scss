@@ -128,13 +128,3 @@
   background-color: var(--byu-feature-card-title-background, $navy);
   color: var(--byu-feature-card-title-color, white);
 }
-
-/* --- FEATURE WIDTHS --- */
-
-.left-slot-container {
-  width: var(--byu-feature-left-width, 50%);
-}
-
-.right-slot-container {
-  width: var(--byu-feature-right-width, 50%);
-}

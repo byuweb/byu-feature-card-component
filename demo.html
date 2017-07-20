@@ -27,22 +27,6 @@
   <link type="text/css" rel="stylesheet" href="//cloud.typography.com/75214/6517752/css/fonts.css" media="all" />
   <link rel="stylesheet" href="https://cdn.byu.edu/byu-theme-components/latest/byu-theme-components.min.css" />
   <script async src="https://cdn.byu.edu/byu-theme-components/latest/byu-theme-components.min.js"></script>
-  <style>
-    h2, p, li, ul, ol {
-      font-family: "Gotham A", "Gotham B", Helvetica, sans-serif;
-    }
-    byu-feature-card h2 {
-      margin: 0;
-      padding: 0;
-      font-size: 25px;
-      font-weight: 500;
-    }
-    byu-feature-card.myNavyCard {
-      width: 50%;
-      --byu-feature-left-width: 30%;
-      --byu-feature-right-width: 70%;
-    }
-  </style>
 </head>
 <body>
   <byu-header>
@@ -52,12 +36,16 @@
   <!-- Title Styling -->
   <byu-feature-card class="myNavyCard navy-title">
     <h2 slot="title">This is the title!</h2>
-    <p slot="feature-left">Some filler text for the slot.</p>
-    <ul slot="feature-right">
-      <li>This is point one.</li>
-      <li>This is point two.</li>
-      <li>This is point three.</li>
-    </ul>
+    <div slot="feature-left">
+      <p>Some filler text for the slot.</p>
+    </div>
+    <div slot="feature-right">
+      <ul>
+        <li>This is point one.</li>
+        <li>This is point two.</li>
+        <li>This is point three.</li>
+      </ul>
+    </div>
     <p slot="feature-center">
       BYU is so great. Cosmo the Cougar is my best friend. I am so excited for WebFest!
     </p>
@@ -66,8 +54,8 @@
   <!-- Without Logo -->
   <byu-feature-card class="myDarkGrayCard dark-gray-title" without-logo>
     <h2 slot="title">This is the title!</h2>
-    <p slot="feature-left">Some filler text for the slot.</p>
-    <ul slot="feature-right">
+    <p slot="feature-left" class="fifty-percent-feature">Some filler text for the slot.</p>
+    <ul slot="feature-right" class="fifty-percent-feature">
       <li>This is point one.</li>
       <li>This is point two.</li>
       <li>This is point three.</li>
