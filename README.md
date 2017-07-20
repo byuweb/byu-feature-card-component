@@ -4,17 +4,7 @@ This component is meant to be used to feature a single piece of content (i.e. ne
 
 # How It Works
 
-In a stylesheet:
 
-```css
-byu-feature-card.cardClass {
-  --byu-feature-left-width: 30%;
-  --byu-feature-right-width: 70%;
-}
-```
-These are optional CSS attributes. If you don't specify them, it will default to 50% width for each feature.
-
-In `<body>`:
 
 ```html
 <byu-feature-card class="cardClass navy-title" without-logo>
