@@ -71,10 +71,22 @@ $white: #FFFFFF;
   box-sizing: inherit;
 }
 
+@mixin featureTopContainer() {
+  box-sizing: inherit;
+  display: flex;
+}
+
+@mixin featureTopContainerSlotted() {
+  padding: 15px;
+}
+
 @mixin firstRow() {
   box-sizing: inherit;
-  padding: 15px;
   display: flex;
+}
+
+@mixin firstRowSlotted() {
+  padding: 15px !important;
 }
 
 @mixin leftSlotContainer() {

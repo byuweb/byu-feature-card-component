@@ -43,8 +43,20 @@
     @include featureContainer();
   }
 
+  .feature-top-container {
+    @include featureTopContainer();
+  }
+
+  .feature-top-container ::slotted(*) {
+    @include featureTopContainerSlotted();
+  }
+
   .first-row {
     @include firstRow();
+  }
+
+  .first-row ::slotted(*) {
+    @include firstRowSlotted();
   }
 
   .left-slot-container {
