@@ -84,54 +84,58 @@
   .title-slotted-content {
     @include navyTitleBg();
   }
-  .title-slotted-content a {
-    @include titleLinkColor();
-  }
+  //.title-slotted-content a {
+  //  @include titleLinkColor();
+  //}
 }
 
 :host(.dark-gray-title) {
   .title-slotted-content {
     @include darkGrayTitleBg();
   }
-  .title-slotted-content a {
-    @include titleLinkColor();
-  }
+  //.title-slotted-content a {
+  //  @include titleLinkColor();
+  //}
 }
 
 :host(.wordpress-gray-title) {
   .title-slotted-content {
     @include wordpressGrayTitleBg();
   }
-  .title-slotted-content a {
-    @include titleLinkColor();
-  }
+  //.title-slotted-content a {
+  //  @include titleLinkColor();
+  //}
 }
 
 :host(.drupal-blue-title) {
   .title-slotted-content {
     @include drupalBlueTitleBg();
   }
-  .title-slotted-content a {
-    @include titleLinkColor();
-  }
+  //.title-slotted-content a {
+  //  @include titleLinkColor();
+  //}
 }
 
 :host(.royal-blue-title) {
   .title-slotted-content {
     @include royalBlueTitleBg();
   }
-  .title-slotted-content a {
-    @include titleLinkColor();
-  }
+  //.title-slotted-content a {
+  //  @include titleLinkColor();
+  //}
 }
 
 :host(.gray-title) {
   .title-slotted-content {
     @include grayTitleBg();
   }
-  .title-slotted-content a {
-    @include titleLinkColor();
-  }
+  //.title-slotted-content a {
+  //  @include titleLinkColor();
+  //}
+}
+
+:host .title-container a {
+  @include titleLinkColor();
 }
 
 // Allows variable styles if we need them.
