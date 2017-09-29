@@ -134,7 +134,7 @@
   //}
 }
 
-:host .title-container a {
+:host [slot="title"] a {
   @include titleLinkColor();
 }
 
