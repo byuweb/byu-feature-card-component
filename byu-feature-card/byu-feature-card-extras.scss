@@ -21,4 +21,6 @@ byu-feature-card [slot="title"] {
   @include titleFont();
 }
 
-
+byu-feature-card [slot="title"] a {
+  @include titleLinkColor();
+}
