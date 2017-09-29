@@ -19,8 +19,13 @@
 
 :host {
   @include defaultLayout();
+
   .root {
     @include rootLayout();
+  }
+
+  .root:hover {
+    @include rootHover();
   }
 
   .title-slotted-content {
