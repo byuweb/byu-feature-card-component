@@ -24,10 +24,6 @@
     @include rootLayout();
   }
 
-  .root:hover {
-    @include rootHover();
-  }
-
   .title-slotted-content {
     @include titleSlottedContent();
   }
@@ -74,6 +70,11 @@
 
   .center-slot-container {
     @include centerSlotContainer();
+  }
+}
+:host(:hover) {
+  .root {
+    @include rootHover();
   }
 }
 
