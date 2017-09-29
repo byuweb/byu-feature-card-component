@@ -134,10 +134,6 @@
   //}
 }
 
-:host [slot="title"] a {
-  @include titleLinkColor();
-}
-
 // Allows variable styles if we need them.
 
 .title-slotted-content {
