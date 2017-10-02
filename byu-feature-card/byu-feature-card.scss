@@ -19,6 +19,7 @@
 
 :host {
   @include defaultLayout();
+
   .root {
     @include rootLayout();
   }
@@ -69,6 +70,11 @@
 
   .center-slot-container {
     @include centerSlotContainer();
+  }
+}
+:host(:hover) {
+  .root {
+    @include rootHover();
   }
 }
 
