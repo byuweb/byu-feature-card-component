@@ -24,7 +24,7 @@ The card is divided into three rows: the title row, feature row, and body row. T
 
 _Logo_: By default, the BYU monogram will be on the right of the card title. If you don't want it, just add the `without-logo` attribute (see the example above).
 
-_Title Background Color_: This component comes packaged with predefined, accessible packages for styling the title:
+_Title Background Color_: This component comes packaged with predefined, accessible packages for styling the title. Add one of these classes to your byu-feature-card element to change the title background:
 
 - `navy-title`
 - `royal-blue-title`
