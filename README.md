@@ -1,8 +1,18 @@
 # BYU Feature Card
 
 This component is meant to be used to feature a single piece of content (i.e. news story, calendar event, etc.).
+## To Use:
 
-# How It Works
+A. Drupal: Likely Coming Soon - a submodule in the module Views Card D7 - You will be able to enable the module, and create a view. The style is defined within the view.
+
+B. Not Drupal:
+
+Reference the js and css file for byu-feature-card:
+js: https://cdn.byu.edu/byu-feature-card/1.x.x/byu-feature-card.min.js: 
+css: https://cdn.byu.edu/byu-feature-card/1.x.x/byu-feature-card.min.css
+
+Place your content inside <byu-feature-card> tags. Your content should be a direct child to the <byu-card> tag. See the demo at https://github.com/byuweb/byu-feature-card/blob/master/my-component/demo.html
+## How It Works
 
 
 
