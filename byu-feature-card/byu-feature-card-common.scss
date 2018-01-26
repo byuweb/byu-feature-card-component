@@ -43,8 +43,8 @@ $white: #FFFFFF;
 
 @mixin titleSlottedContent() {
   width: 100%;
-  height: 50px;
-  padding: 13px 13px;
+  min-height: 10px;
+  max-height: 50px;
   align-items: center;
   box-sizing: inherit;
   flex: 1;
@@ -58,11 +58,12 @@ $white: #FFFFFF;
 @mixin titleFont() {
   font-family: "Gotham A", "Gotham B", Helvetica, sans-serif;
   font-weight: 500;
-  margin: 0;
+  margin: 13px;
 }
 
 @mixin logoContainer() {
   height: 23px;
+  margin: 13px;
 }
 
 @mixin logoContainerImage() {
